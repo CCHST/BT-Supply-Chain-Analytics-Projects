@@ -81,13 +81,10 @@
 			#tagSearch {
 			order: 1;
 			margin-left: auto;
-			width: 150px;        
-			max-width: 150px; 
-			min-width: 100px;
-			padding: .5rem .6rem;
-			border: 1px solid #ccc;
-			border-radius: 10px;
-			font-size: 0.9rem;
+			width: 150px;       /* smaller default */
+			max-width: 150px;
+			min-width: 120px;   /* allow shrinkage */
+			flex-shrink: 1;     /* let it shrink when space is tight */
 			}
 
 			.grid {
@@ -137,7 +134,7 @@
 			#header {
 			padding-top: 1.5rem !important;
 			margin-top: 0 !important;
-			padding-bottom: 0.5rem; /* small space under the title */
+			padding-bottom: 1rem; /* small space under the title */
 			}
 
 			/* Optional: tighten the container inside the header */
