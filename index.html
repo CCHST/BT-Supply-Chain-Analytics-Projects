@@ -10,6 +10,19 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* --- Portfolio extras --- */
+			.filters { display:flex; flex-wrap:wrap; gap:.5rem; margin:1.5rem 0 1.25rem; }
+			.filters .pill { padding:.45rem .9rem; border:1px solid #e6e6e6; border-radius:999px; background:#fff; cursor:pointer; font-size:.9rem; }
+			.filters .pill.active { background:#ffd9cf; border-color:#f4a794; }
+			.grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:1.25rem; }
+			.card { background:#fff; border:1px solid #eee; border-radius:12px; padding:1.1rem 1.2rem; }
+			.card h3 { margin:0 0 .4rem 0; font-size:1.1rem; letter-spacing:.3px; }
+			.badges span { display:inline-block; background:#f5f5f5; padding:.2rem .5rem; margin-right:.4rem; border-radius:6px; font-size:.75rem; }
+			.card .button { margin-top:.6rem; }
+			#tagSearch { width:100%; padding:.6rem .8rem; border:1px solid #e6e6e6; border-radius:10px; margin:.5rem 0 1rem; }
+		</style>
+
 	</head>
 	
 	<body>
@@ -19,7 +32,7 @@
 					<div class="container">
 
 						<!-- Logo -->
-							<h1 id="logo"><a href="index.html">Cindy Cheng</a></h1>
+							<h1 id="logo"><a href="index.html">BT-Supply Chain Analytics Projects</a></h1>
 							<p>MS Tech Management @ UIUC '25 | MBA in International Business @ NTU '24 | Ex-Data Analyst in Finance & E-commerce</p>
 
 						<!-- Nav -->
@@ -70,6 +83,106 @@
 											</ul>
 										</section>
 								</div>
+						</div>
+					</div>
+				</section>
+				<!-- Portfolio -->
+				<section id="portfolio">
+					<div class="container">
+						<header>
+						<h2>Project Portfolio</h2>
+						<p>Filter by category or tag to explore my work. Each card shows Problem → Action → Impact.</p>
+						</header>
+
+						<!-- Filters -->
+						<div class="filters">
+						<button class="pill active" data-filter="*">All</button>
+						<button class="pill" data-filter="automation">Process Improvement & Automation</button>
+						<button class="pill" data-filter="analytics">Root-Cause / Analytics</button>
+						<button class="pill" data-filter="dashboards">Dashboard Development</button>
+						</div>
+
+						<!-- Optional tag search -->
+						<input id="tagSearch" type="text" placeholder="Filter by tag (e.g., power bi, vba, smartsheet)…" />
+
+						<!-- Cards -->
+						<div class="grid">
+
+						<!-- ======== AUTOMATION ======== -->
+						<article class="card" data-category="automation" data-tags="vba,ehs,automation,pdf,excel">
+							<h3>VBA for EHS (Katrina)</h3>
+							<p class="badges"><span>VBA</span><span>Excel</span></p>
+							<p><strong>Problem:</strong> Manual PDF invoice extraction slowed weekly reporting.</p>
+							<p><strong>Action:</strong> Macro to save PDFs, parse “Total Invoice Value,” and write to master sheet.</p>
+							<p><strong>Impact:</strong> Prep time ↓ ~70%, fewer manual errors.</p>
+							<a class="button" href="#">View project</a>
+						</article>
+
+						<article class="card" data-category="automation" data-tags="ax,prism,handover,data shuttle,scribe">
+							<h3>AX Exports & PRISM Handover</h3>
+							<p class="badges"><span>AX</span><span>Smartsheet</span></p>
+							<p><strong>Problem:</strong> Only one person able to refresh PRISM data.</p>
+							<p><strong>Action:</strong> Set AX filters + Data Shuttle; created scribe and trained backup.</p>
+							<p><strong>Impact:</strong> Resilience ↑; daily refresh continuity.</p>
+							<a class="button" href="#">View project</a>
+						</article>
+
+						<article class="card" data-category="automation" data-tags="template,shipping delay,consumables,weekly report">
+							<h3>Shipping Delay Template (Consumables)</h3>
+							<p class="badges"><span>Template</span><span>Ops</span></p>
+							<p><strong>Problem:</strong> Weekly report assembly was repetitive.</p>
+							<p><strong>Action:</strong> Reusable template + pre-calc fields.</p>
+							<p><strong>Impact:</strong> Report build time ↓ significantly.</p>
+							<a class="button" href="#">View project</a>
+						</article>
+
+						<!-- ======== ANALYTICS ======== -->
+						<article class="card" data-category="analytics" data-tags="otd,reason codes,holiday effect,logistics">
+							<h3>OTD Misses — Root-Cause</h3>
+							<p class="badges"><span>Power BI</span><span>Analytics</span></p>
+							<p><strong>Problem:</strong> Mixed OTD signals masked by Labor Day.</p>
+							<p><strong>Action:</strong> Split Domestic/International; delayed-wave logic.</p>
+							<p><strong>Impact:</strong> 83% overall → 90% excl. week 1; flagged 740 delayed wave exec.</p>
+							<a class="button" href="#">View project</a>
+						</article>
+
+						<article class="card" data-category="analytics" data-tags="wave failure,investigation,shipping management">
+							<h3>Shipping Wave Failure Investigation</h3>
+							<p class="badges"><span>Ops</span><span>Analytics</span></p>
+							<p><strong>Problem:</strong> Orders falling off the wave not captured.</p>
+							<p><strong>Action:</strong> Collaborated with team; cataloged missed cases; defined checks.</p>
+							<p><strong>Impact:</strong> Visibility ↑; actionable defect list for IT follow-up.</p>
+							<a class="button" href="#">View project</a>
+						</article>
+
+						<!-- ======== DASHBOARDS ======== -->
+						<article class="card" data-category="dashboards" data-tags="a-item,inventory,abc,ax,power bi">
+							<h3>MPLS A-Item Health Dashboard</h3>
+							<p class="badges"><span>Power BI</span><span>AX</span></p>
+							<p><strong>Problem:</strong> No at-a-glance A-item risk view.</p>
+							<p><strong>Action:</strong> ABC + gating logic; BOM roll-ups.</p>
+							<p><strong>Impact:</strong> Faster triage; clearer kit readiness.</p>
+							<a class="button" href="#">View project</a>
+						</article>
+
+						<article class="card" data-category="dashboards" data-tags="bom,levels,relationships,smartsheet,velvet">
+							<h3>Velvet BOM Levels & Relationships</h3>
+							<p class="badges"><span>Smartsheet</span><span>BOM</span></p>
+							<p><strong>Problem:</strong> Hard to see subkit structure and conversions.</p>
+							<p><strong>Action:</strong> Expanded levels with conversion factors; parent-child visibility.</p>
+							<p><strong>Impact:</strong> Better planning for future production.</p>
+							<a class="button" href="#">View project</a>
+						</article>
+
+						<article class="card" data-category="dashboards" data-tags="logistics spend,hts,fedex,dhl">
+							<h3>Logistics Spend Dashboard</h3>
+							<p class="badges"><span>Power BI</span><span>Logistics</span></p>
+							<p><strong>Problem:</strong> Fragmented view of freight & tariff costs.</p>
+							<p><strong>Action:</strong> Consolidated carriers/HTS; trend + drill.</p>
+							<p><strong>Impact:</strong> Cost drivers identified; actions prioritized.</p>
+							<a class="button" href="#">View project</a>
+						</article>
+
 						</div>
 					</div>
 				</section>
@@ -154,6 +267,32 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+			(function(){
+				const pills = document.querySelectorAll('.filters .pill');
+				const cards = document.querySelectorAll('#portfolio .grid .card');
+				const search = document.getElementById('tagSearch');
+
+				function applyFilters() {
+				const active = document.querySelector('.filters .pill.active')?.dataset.filter || '*';
+				const q = (search.value || '').trim().toLowerCase();
+				cards.forEach(c => {
+					const catOk = (active === '*') || c.dataset.category.includes(active);
+					const tags = (c.dataset.tags || '').toLowerCase();
+					const tagOk = !q || tags.includes(q);
+					c.style.display = (catOk && tagOk) ? '' : 'none';
+				});
+				}
+
+				pills.forEach(p => p.addEventListener('click', () => {
+				pills.forEach(x => x.classList.remove('active'));
+				p.classList.add('active');
+				applyFilters();
+				}));
+
+				search.addEventListener('input', applyFilters);
+			})();
+			</script>
 
 	</body>
 </html>
