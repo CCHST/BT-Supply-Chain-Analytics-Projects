@@ -17,15 +17,14 @@
 			}
 
 			#header {
-			padding-top: 1rem;     
+			padding-top: 0rem;     
 			padding-bottom: 1rem;  
 			margin-top: 0;         
 			}
 
 			#logo {
 			margin-top: 0;
-			margin-bottom: 0.5rem;
-			line-height: 1.3;     
+			margin-bottom: 0.5rem;  
 			}
 
 			#logo a { 
@@ -40,7 +39,19 @@
 			#portfolio { background:#f9fafc; padding:3rem 0; }
 			#portfolio header h2 { font-size:2rem; margin-bottom:1rem; }
 			#portfolio p { color:#333; } 
-			
+			#portfolio .grid {
+			max-width: 1300px;                   /* wider overall container */
+			margin: 0 auto;                      /* center the grid */
+			grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); 
+			/* ↑ 330px minimum per card so text fits one line */
+			gap: 1.8rem;                          /* space between cards */
+			}
+
+			#portfolio .card {
+			padding: 1.2rem 1.4rem;
+			}
+
+
 			.filters .pill {
 			background: #fff;
 			color: #000 !important;          /* force black text */
@@ -144,12 +155,30 @@
 
 						<!-- ======== AUTOMATION ======== -->
 						<article class="card" data-category="automation" data-tags="vba,ehs,automation,pdf,excel">
-							<h3>VBA for EHS (Katrina)</h3>
+							<h3>VBA for MPLS & SJ Backlog report</h3>
+							<p class="badges"><span>VBA</span><span>Excel</span></p>
+							<p><strong>Problem:</strong> Manual copy-paste and email preparation.</p>
+							<p><strong>Action:</strong> Developed a VBA macro to create the new backlog file, refresh data from the export file, and generate a pre-filled Outlook email.</p>
+							<p><strong>Impact:</strong> Reduced preparation time by approximately 90% and decreased manual errors.</p>
+							<a class="button" href="https://rdsystemsinc-my.sharepoint.com/:x:/g/personal/cindy_cheng_bio-techne_com/EU3YkeUrWShNvmlsL8b944UBsENTK9sYflVbaz1-Kc5cuw?e=VSWaUV">View project</a>
+						</article>
+
+						<article class="card" data-category="automation" data-tags="vba,ehs,automation,pdf,excel">
+							<h3>VBA for EHS Department</h3>
 							<p class="badges"><span>VBA</span><span>Excel</span></p>
 							<p><strong>Problem:</strong> Manual extraction of PDF invoices delayed reporting.</p>
 							<p><strong>Action:</strong> Developed a VBA macro to automatically save PDF attachments and record results in the master sheet.</p>
 							<p><strong>Impact:</strong> Reduced preparation time by approximately 70% and decreased manual errors.</p>
-							<a class="button" href="#">View project</a>
+							<a class="button" href="https://rdsystemsinc-my.sharepoint.com/:x:/g/personal/cindy_cheng_bio-techne_com/EThq2rhqNExEhN5ylUZMv-EB6jEMohn3-DfQ59HzogMvkQ?e=ASPH2K">View project</a>
+						</article>
+
+						<article class="card" data-category="automation" data-tags="vba,ehs,automation,pdf,excel">
+							<h3>VBA for EHS Department</h3>
+							<p class="badges"><span>VBA</span><span>Excel</span></p>
+							<p><strong>Problem:</strong> Manual extraction of PDF invoices delayed reporting.</p>
+							<p><strong>Action:</strong> Developed a VBA macro to automatically save PDF attachments and record results in the master sheet.</p>
+							<p><strong>Impact:</strong> Reduced preparation time by approximately 70% and decreased manual errors.</p>
+							<a class="button" href="https://rdsystemsinc-my.sharepoint.com/:x:/g/personal/cindy_cheng_bio-techne_com/EQu4U9a7zZNJhyLh1qjwEp0BtRE9PY-yVTPqqGh2sJVB7A?e=uahZaK">View project</a>
 						</article>
 
 						<article class="card" data-category="automation" data-tags="ax,prism,handover,data shuttle,scribe">
