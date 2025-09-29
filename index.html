@@ -51,10 +51,9 @@
 			padding: 1.2rem 1.4rem;
 			}
 
-
 			.filters .pill {
 			background: #fff;
-			color: #000 !important;          /* force black text */
+			color: #000 !important;
 			border: 1px solid #d4d4d4;
 			border-radius: 20px;
 			padding: .45rem 1rem;
@@ -65,16 +64,29 @@
 
 			.filters .pill.active,
 			.filters .pill:hover {
-			background: #0072CE;             /* Bio-Techne blue background */
-			color: #fff !important;          /* white text when selected or hovered */
+			background: #0072CE;
+			color: #fff !important;
 			border-color: #0072CE;
 			}
 
+			/* ====== layout updates (add these) ====== */
+			.filters {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;  /* pills start on the left */
+			align-items: center;
+			gap: 0.6rem;
+			}
 
 			#tagSearch {
-				width:60%; max-width:400px; display:block; margin:0 auto 2rem;
-				padding:.6rem .8rem; border:1px solid #ccc; border-radius:10px;
-				font-size:1rem;
+			order: 1;            /* make sure it’s after the buttons */
+			margin-left: auto;   /* push to far right */
+			min-width: 220px;
+			max-width: 300px;
+			padding: .5rem .8rem;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			font-size: 1rem;
 			}
 
 			.grid {
@@ -145,6 +157,10 @@
 						<button class="pill" data-filter="automation">Process Improvement & Automation</button>
 						<button class="pill" data-filter="analytics">Root-Cause Analysis</button>
 						<button class="pill" data-filter="dashboards">Dashboard Development</button>
+
+						<!-- move input here -->
+						<input id="tagSearch" type="text"
+								placeholder="Filter by tag (e.g., power bi, vba, smartsheet)…" />
 						</div>
 
 						<!-- Optional tag search -->
@@ -158,17 +174,17 @@
 							<h3>VBA for MPLS & SJ Backlog report</h3>
 							<p class="badges"><span>VBA</span><span>Excel</span></p>
 							<p><strong>Problem:</strong> Manual copy-paste and email preparation.</p>
-							<p><strong>Action:</strong> Developed a VBA macro to create the new backlog file, refresh data from the export file, and generate a pre-filled Outlook email.</p>
+							<p><strong>Action:</strong> Developed a VBA macro to create the new backlog file and generate a pre-filled Outlook email.</p>
 							<p><strong>Impact:</strong> Reduced preparation time by approximately 90% and decreased manual errors.</p>
 							<a class="button" href="https://rdsystemsinc-my.sharepoint.com/:x:/g/personal/cindy_cheng_bio-techne_com/EU3YkeUrWShNvmlsL8b944UBsENTK9sYflVbaz1-Kc5cuw?e=VSWaUV">View project</a>
 						</article>
 
 						<article class="card" data-category="automation" data-tags="vba,ehs,automation,pdf,excel">
-							<h3>VBA for EHS Department</h3>
+							<h3>VBA for China Daily Exports</h3>
 							<p class="badges"><span>VBA</span><span>Excel</span></p>
-							<p><strong>Problem:</strong> Manual extraction of PDF invoices delayed reporting.</p>
-							<p><strong>Action:</strong> Developed a VBA macro to automatically save PDF attachments and record results in the master sheet.</p>
-							<p><strong>Impact:</strong> Reduced preparation time by approximately 70% and decreased manual errors.</p>
+							<p><strong>Problem:</strong> Manually copying and pasting values for four reports.</p>
+							<p><strong>Action:</strong> Developed a VBA macro to copy and paste data from source files to target files.</p>
+							<p><strong>Impact:</strong> Reduced preparation time by approximately 90% and decreased manual errors.</p>
 							<a class="button" href="https://rdsystemsinc-my.sharepoint.com/:x:/g/personal/cindy_cheng_bio-techne_com/EThq2rhqNExEhN5ylUZMv-EB6jEMohn3-DfQ59HzogMvkQ?e=ASPH2K">View project</a>
 						</article>
 
@@ -177,7 +193,7 @@
 							<p class="badges"><span>VBA</span><span>Excel</span></p>
 							<p><strong>Problem:</strong> Manual extraction of PDF invoices delayed reporting.</p>
 							<p><strong>Action:</strong> Developed a VBA macro to automatically save PDF attachments and record results in the master sheet.</p>
-							<p><strong>Impact:</strong> Reduced preparation time by approximately 70% and decreased manual errors.</p>
+							<p><strong>Impact:</strong> Reduced preparation time by approximately 70% and decreased manual errors.</p>	
 							<a class="button" href="https://rdsystemsinc-my.sharepoint.com/:x:/g/personal/cindy_cheng_bio-techne_com/EQu4U9a7zZNJhyLh1qjwEp0BtRE9PY-yVTPqqGh2sJVB7A?e=uahZaK">View project</a>
 						</article>
 
@@ -259,53 +275,11 @@
 						<div class="row">
 							<div class="col-12">
 								<section>
-									<form onsubmit="event.preventDefault(); sendEmail();">
-										<div class="row gtr-50">
-											<div class="col-6 col-12-small">
-												<input id="name" name="name" placeholder="Name" type="text" required />
-											</div>
-											<div class="col-6 col-12-small">
-												<input id="email" name="email" placeholder="Email" type="email" required />
-											</div>
-											<div class="col-12">
-												<textarea id="message" name="message" placeholder="Message" required></textarea>
-											</div>
-											<div class="col-12" style="text-align: right;">
-												<a href="#" class="button icon solid fa-envelope" onclick="sendEmail();">Send Message</a>
-											</div>
-										</div>
-									</form>
-								</section>
-							</div>
-							
-							<script>
-								function sendEmail() {
-									// 獲取用戶輸入值
-									const name = document.getElementById("name").value;
-									const email = document.getElementById("email").value;
-									const message = document.getElementById("message").value;
-							
-									// 構造 mailto 連結
-									const subject = `Message from ${name}`;
-									const body = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
-									const mailtoLink = `mailto:cindycheng3@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-							
-									// 跳轉到 mailto 連結
-									window.location.href = mailtoLink;
-								}
-							</script>
-								<section>
 									<div class="row">
 										<div class="col-12">
 											<ul class="icons">
-												<li class="icon solid fa-phone">
-													<a href="tel:+12179798292">(217) 979-8292</a>
-												</li>
-												<li class="icon brands fa-linkedin">
-													<a href="https://www.linkedin.com/in/cindy-cheng-321763227/">LinkedIn</a>
-												</li>
 												<li class="icon solid fa-envelope">
-													<a href="mailto:hccheng3@illinois.edu">hccheng3@illinois.edu</a>
+													<a href="mailto:cindy.cheng@bio-techne.com">cindy.cheng@bio-techne.com</a>
 												</li>
 											</ul>
 										</div>
