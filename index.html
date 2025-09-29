@@ -11,17 +11,77 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* --- Portfolio extras --- */
-			.filters { display:flex; flex-wrap:wrap; gap:.5rem; margin:1.5rem 0 1.25rem; }
-			.filters .pill { padding:.45rem .9rem; border:1px solid #e6e6e6; border-radius:999px; background:#fff; cursor:pointer; font-size:.9rem; }
-			.filters .pill.active { background:#ffd9cf; border-color:#f4a794; }
-			.grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:1.25rem; }
-			.card { background:#fff; border:1px solid #eee; border-radius:12px; padding:1.1rem 1.2rem; }
-			.card h3 { margin:0 0 .4rem 0; font-size:1.1rem; letter-spacing:.3px; }
-			.badges span { display:inline-block; background:#f5f5f5; padding:.2rem .5rem; margin-right:.4rem; border-radius:6px; font-size:.75rem; }
-			.card .button { margin-top:.6rem; }
-			#tagSearch { width:100%; padding:.6rem .8rem; border:1px solid #e6e6e6; border-radius:10px; margin:.5rem 0 1rem; }
+			/* --- Global font + Bio-Techne blue --- */
+			body, h1, h2, h3, h4, h5, h6, p, a, button, input, textarea {
+				font-family: Calibri, "Segoe UI", sans-serif;
+				color: #0072CE; /* Bio-Techne blue */
+			}
+
+			/* Header title tweak */
+			#logo a { 
+				font-family: Calibri, "Segoe UI", sans-serif;
+				font-weight: 700;
+				color: #0072CE;
+				text-shadow: none;
+			}
+
+			/* --- Portfolio section polish --- */
+			#portfolio { background:#f9fafc; padding:3rem 0; }
+			#portfolio header h2 { font-size:2rem; margin-bottom:1rem; }
+			#portfolio p { color:#333; } /* keep body text dark for readability */
+
+			.filters {
+				display:flex; flex-wrap:wrap; gap:.6rem; margin:1rem 0 1.5rem;
+				justify-content:center;
+			}
+			.filters .pill {
+				background:#fff; border:1px solid #d4d4d4; border-radius:20px;
+				padding:.45rem 1rem; font-size:.9rem; cursor:pointer;
+				transition:all .2s ease;
+			}
+			.filters .pill.active, .filters .pill:hover {
+				background:#0072CE; color:#fff; border-color:#0072CE;
+			}
+
+			#tagSearch {
+				width:60%; max-width:400px; display:block; margin:0 auto 2rem;
+				padding:.6rem .8rem; border:1px solid #ccc; border-radius:10px;
+				font-size:1rem;
+			}
+
+			.grid {
+				display:grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap:1.5rem;
+				max-width:1100px;
+				margin:0 auto;
+			}
+			.card {
+				background:#fff; border:1px solid #e6e6e6; border-radius:12px;
+				padding:1.2rem 1.4rem;
+				box-shadow:0 2px 6px rgba(0,0,0,0.05);
+				display:flex; flex-direction:column; justify-content:space-between;
+				transition:transform .15s ease, box-shadow .15s ease;
+			}
+			.card:hover {
+				transform:translateY(-3px);
+				box-shadow:0 4px 12px rgba(0,0,0,0.1);
+			}
+			.card h3 { color:#0072CE; margin-top:0; font-size:1.15rem; }
+			.badges span {
+				display:inline-block; background:#eef3f7; color:#0072CE;
+				padding:.2rem .55rem; margin-right:.3rem; margin-bottom:.4rem;
+				border-radius:8px; font-size:.75rem;
+			}
+			.card .button {
+				background:#0072CE; color:#fff; border:none;
+				padding:.6rem 1rem; margin-top:1rem; border-radius:8px;
+				text-align:center; text-decoration:none;
+				transition:background .2s ease;
+			}
+			.card .button:hover { background:#005fa3; }
 		</style>
+
 
 	</head>
 	
@@ -33,7 +93,7 @@
 
 						<!-- Logo -->
 							<h1 id="logo"><a href="index.html">BT-Supply Chain Analytics Projects</a></h1>
-							<p>MS Tech Management @ UIUC '25 | MBA in International Business @ NTU '24 | Ex-Data Analyst in Finance & E-commerce</p>
+							<p></p>
 
 						<!-- Nav -->
 							<nav id="nav">
@@ -71,10 +131,7 @@
 
 													<!-- Excerpt -->
 														<article class="box excerpt">
-															<p>In 2021, I co-founded a startup with the mission of leveraging technology to create a tool that transforms lengthy paragraphs and essays into structured graphs, enabling users to quickly grasp main ideas without reading the entire text. We successfully secured $10,000 in funding, which deepened my understanding of the transformative power of technology in driving business innovation. This experience sparked my passion for utilizing technology in business and led me to immerse myself in the field of data analysis.</p>
-															<p>With two years of professional experience as a Data Analyst in the financial and e-commerce sectors, I have developed strong expertise in exploratory data analysis, designing algorithms to optimize business processes, and applying machine learning models to solve complex problems. My proficiency in data visualization tools like Tableau has enabled me to translate complex data into actionable insights for key stakeholders.</p>
-															<p>Currently, as a graduate student in Technology Management at the University of Illinois Urbana-Champaign (UIUC), I am focusing on data modeling, machine learning applications, and the strategic use of technology to drive innovation. My goal is to harness these skills to deliver impactful solutions that bridge the gap between technology and business strategy.</p>
-															<p>Thank you for taking the time to learn about me. I am eager to connect, collaborate, and contribute to meaningful projects that create value through data and technology.</p>
+															<p></p>
 										
 														</article>
 
