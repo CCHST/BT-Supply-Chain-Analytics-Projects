@@ -79,10 +79,20 @@
 			#tagSearch {
 			order: 1;
 			margin-left: auto;
-			width: 50px;       /* smaller default */
-			max-width: 50px;
-			min-width: 20px;   /* allow shrinkage */
+			width: 300px;       /* longer input */
+			max-width: 300px;
+			min-width: 150px;   /* minimum width */
 			flex-shrink: 1;     /* let it shrink when space is tight */
+			border: none;       /* remove border */
+			border-bottom: 2px solid #d4d4d4;  /* subtle underline */
+			padding: 0.5rem 0.75rem;
+			background: transparent;
+			outline: none;
+			transition: border-color 0.2s ease;
+			}
+			
+			#tagSearch:focus {
+			border-bottom-color: #0072CE;  /* blue underline on focus */
 			}
 
 			.grid {
@@ -183,7 +193,7 @@
 						<!-- ======== AUTOMATION ======== -->
 						<article class="card" data-category="automation" data-tags="vba,ehs,automation,pdf,excel">
 							<h3>VBA for MPLS & SJ Backlog report</h3>
-							<p class="badges"><span>VBA</span><span>Excel</span></p>
+							<p class="badges"><span>VBA</span><span>Excel</span><span>Outlook</span></p>
 							<p><strong>Problem:</strong> Manual copy-paste and email preparation.</p>
 							<p><strong>Action:</strong> Developed a VBA macro to create the new backlog file and generate a pre-filled Outlook email.</p>
 							<p><strong>Impact:</strong> Reduced preparation time by approximately 90% and decreased manual errors.</p>
@@ -201,29 +211,20 @@
 
 						<article class="card" data-category="automation" data-tags="vba,ehs,automation,pdf,excel">
 							<h3>VBA for EHS Department</h3>
-							<p class="badges"><span>VBA</span><span>Excel</span></p>
+							<p class="badges"><span>VBA</span><span>Excel</span><span>PDF</span></p>
 							<p><strong>Problem:</strong> Manual extraction of PDF invoices delayed reporting.</p>
 							<p><strong>Action:</strong> Developed a VBA macro to automatically save PDF attachments and record results in the master sheet.</p>
 							<p><strong>Impact:</strong> Reduced preparation time by approximately 70% and decreased manual errors.</p>	
 							<a class="button" href="https://rdsystemsinc-my.sharepoint.com/:x:/g/personal/cindy_cheng_bio-techne_com/EQu4U9a7zZNJhyLh1qjwEp0BtRE9PY-yVTPqqGh2sJVB7A?e=uahZaK">View project</a>
 						</article>
 
-						<article class="card" data-category="automation" data-tags="ax,prism,handover,data shuttle,scribe">
-							<h3>AX Exports & PRISM Handover</h3>
-							<p class="badges"><span>AX</span><span>Smartsheet</span></p>
-							<p><strong>Problem:</strong> Only one person able to refresh PRISM data.</p>
-							<p><strong>Action:</strong> Set AX filters + Data Shuttle; created scribe and trained backup.</p>
-							<p><strong>Impact:</strong> Resilience ↑; daily refresh continuity.</p>
-							<a class="button" href="#">View project</a>
-						</article>
-
 						<article class="card" data-category="automation" data-tags="template,shipping delay,consumables,weekly report">
 							<h3>Shipping Delay Template (Consumables)</h3>
-							<p class="badges"><span>Template</span><span>Ops</span></p>
-							<p><strong>Problem:</strong> Weekly report assembly was repetitive.</p>
-							<p><strong>Action:</strong> Reusable template + pre-calc fields.</p>
-							<p><strong>Impact:</strong> Report build time ↓ significantly.</p>
-							<a class="button" href="#">View project</a>
+							<p class="badges"><span>Excel</span></p>
+							<p><strong>Problem:</strong> Weekly report assembly was repetitive and required checking multiple reports to find related components, item descriptions, business units, and whether an item was an A-item.</p>
+							<p><strong>Action:</strong> Reusable template + pre-calculated fields.</p>
+							<p><strong>Impact:</strong> Report build time decreased significantly.</p>
+							<a class="button" href="https://rdsystemsinc-my.sharepoint.com/:x:/g/personal/cindy_cheng_bio-techne_com/EWRqrl0ummFLlhffggUvyusBgw6FRIqToqewHJR_TjE1FQ?e=X5WPxd">View project</a>
 						</article>
 
 						<!-- ======== ANALYTICS ======== -->
