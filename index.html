@@ -29,6 +29,7 @@
 				text-shadow: none;
 				white-space: nowrap;
   				font-size: clamp(1.5rem, 5vw, 3rem);
+  				border: none;  /* remove any border */
 			}
 
 			#portfolio { background:#f9fafc; padding:3rem 0; }
@@ -140,9 +141,10 @@
 
 			/* Pull the header section tighter to the top */
 			#header {
-			padding-top: 0.5rem !important;
+			padding-top: 1.5rem !important;
 			margin-top: 0 !important;
-			padding-bottom: 0.5rem; /* small space under the title */
+			padding-bottom: 1.5rem; /* space under the title */
+			border-bottom: none;  /* remove bottom border */
 			}
 
 			/* Optional: tighten the container inside the header */
@@ -183,7 +185,7 @@
 
 						<!-- move input here -->
 						<input id="tagSearch" type="text"
-								placeholder="Filter by tag (e.g., power bi, vba, smartsheet)…" />
+								placeholder="Filter by tag (e.g., power bi, vba)…" />
 						</div>
 
 
