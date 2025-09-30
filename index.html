@@ -60,6 +60,8 @@
 			font-size: .9rem;
 			cursor: pointer;
 			transition: all .2s ease;
+			white-space: nowrap;  /* prevent text from wrapping inside pills */
+			flex-shrink: 0;  /* prevent pills from shrinking */
 			}
 
 			.filters .pill.active,
@@ -72,10 +74,11 @@
 			/* ====== layout updates (add these) ====== */
 			.filters {
 			display: flex;
-			flex-wrap: wrap;
+			flex-wrap: nowrap;  /* prevent wrapping to keep on one line */
 			justify-content: flex-start;  /* pills start on the left */
 			align-items: center;
 			gap: 0.6rem;
+			overflow-x: auto;  /* allow horizontal scroll if needed */
 			}
 
 			#tagSearch {
@@ -132,9 +135,9 @@
 
 			/* Pull the header section tighter to the top */
 			#header {
-			padding-top: 1.5rem !important;
-			margin-top: 1 !important;
-			padding-bottom: 1.5rem; /* small space under the title */
+			padding-top: 0.5rem !important;
+			margin-top: 0 !important;
+			padding-bottom: 0.5rem; /* small space under the title */
 			}
 
 			/* Optional: tighten the container inside the header */
